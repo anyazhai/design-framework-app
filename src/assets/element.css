@@ -1,0 +1,81 @@
+body{
+    --accent: #A503DE;
+}
+
+/*--------------------/
+Tab layout
+/---------------------*/
+
+#design{
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: 50% auto;
+}
+
+.grid-example-elements{
+    background-color: #a403de0d;
+    display: grid;
+    padding: 50px;
+    column-gap: 30px;
+    row-gap: 50px;
+    grid-template-columns: 50% auto;
+}
+
+.grid-example-elements > div{
+    align-items: center;
+    text-align: center;
+    width: fit-content;
+    color: #000000bb;
+    font-size: 14px;
+}
+
+.ui-info{
+    margin-top: 30px;
+    margin-left: 4px;
+}
+
+/*--------------------/
+Buttons UI
+/---------------------*/
+
+.btn{
+    border-style: inset;
+    width: fit-content;
+    min-width: 100px;
+    padding: 12px 40px;
+    margin: 10px;
+    cursor: pointer;
+    display: block;
+    border: none;
+    transition: 0.4s;
+    font-size: 16px;
+    border-radius: 4px;
+    box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, 0.030);
+}
+
+.button-square{
+    background-color: var(--accent);
+    color: white;
+}
+
+.button-round{
+    border-radius: 100px;
+    background-color: var(--accent);
+    color: white;
+}
+
+.button-square-disabled{
+    background-color: transparent;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), var(--accent);
+    color: rgba(255, 255, 255, 0.674);
+    cursor: default;
+    box-shadow:  not-allowed;
+}
+
+.button-round:hover, .button-square:hover{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), var(--accent);
+}
+
+.secondary-button-square:hover{
+    background-color: #0075db0f;
+}

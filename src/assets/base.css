@@ -6,7 +6,8 @@
 }
 
 *{
-    font-family: 'Merriweather', serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 
 /* Remove default margin */
@@ -36,7 +37,6 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
@@ -80,14 +80,17 @@ select {
 
 a{
     text-decoration: none;
-    font-weight: 300;
 }
 
 li{
-    padding: 0 20px;
-    list-style-type: none;
+  list-style-type: none;
 }
 
 h1, h2, h3, h4{
     font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.bold{
+  font-weight: 500;
 }
