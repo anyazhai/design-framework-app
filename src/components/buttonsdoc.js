@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidescrollbar from './sidescrollbar';
 import Element from './element';
-
+import buttonsData from '../json/buttons.json';
 
 //Main assemnler component of documentation of all Button types.
 
@@ -18,11 +18,26 @@ export default function Buttonsdoc(){
                 <br></br>
                 <br></br>
                 <h2 className='types'>Types</h2>
-                <h3>Filled Buttons</h3>
-                <br></br>
-                <Element/>
-            </div>
+
+                {
+                    buttonsData.map( data => {return(
+                        <div className='marginB'>
+                            <h3>{data.name}</h3>
+                            <br></br>
+                            <Element
+                                id = {data.id}
+                                usage = {data.design.usage}
+                                html = {data.implement.html}
+                                css = {data.implement.css}
+                                js = {data.implement.js}
+                                guideline = {data.implement.guideline}
+                            />
+                        </div>
+                    )}
+                )
+                }
             
+            </div>
         </div>
     )
 }

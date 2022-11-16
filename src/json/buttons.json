@@ -1,35 +1,41 @@
 [
     {
         "id": 1,
+        "name": "Filled button",
         "design": {
             "usage" : "Filled buttons are the most prominent ones of all the button types. These buttons are usually used to draw attention to the actions which are primary to the user flow."
         },
         "implement": {
             "html": "code",
             "css": "code",
+            "js": "No JS code",
             "guideline": "lorem epsum dolor"
         }
     },
     {
         "id": 2,
+        "name": "Outlined button",
         "design": {
             "usage" : "Filled buttons are the most prominent ones of all the button types. These buttons are usually used to draw attention to the actions which are primary to the user flow."
         },
         "implement": {
             "html": "code",
             "css": "code",
+            "js": "No JS code",
             "guideline": "lorem epsum dolor"
         }
 
     },
     {
         "id": 3,
+        "name": "Text button",
         "design": {
             "usage" : "Filled buttons are the most prominent ones of all the button types. These buttons are usually used to draw attention to the actions which are primary to the user flow."
         },
         "implement": {
             "html": "code",
             "css": "code",
+            "js": "No JS code",
             "guideline": "lorem epsum dolor"
         }
 

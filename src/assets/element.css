@@ -2,9 +2,7 @@ body{
     --accent: #A503DE;
 }
 
-.marginB{
-    margin-bottom: 70px;
-}
+
 
 /*--------------------/
 Tab layout - Design
@@ -45,7 +43,7 @@ Tab layout - implementation
 .implement-grid{
     display: none;
     column-gap: 30px;
-    grid-template-columns: 57% auto;
+    grid-template-columns: 60% auto;
     margin: 20px 10px;
 }
 
@@ -94,7 +92,13 @@ Tab layout - implementation
     color: #A503DE;
 }
 
-.html, .css{
+.code{
+    display: none;
+    margin-top: 40px;
+}
+
+.code-window-active{
+    display: block;
     margin-top: 40px;
 }
 

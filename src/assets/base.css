@@ -110,6 +110,10 @@ button{
   text-align: center;
 }
 
+.marginB{
+  margin-bottom: 70px;
+}
+
 /*scrollbar*/
 
 ::-webkit-scrollbar {
