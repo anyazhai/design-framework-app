@@ -2,21 +2,25 @@ body{
     --accent: #A503DE;
 }
 
+.marginB{
+    margin-bottom: 70px;
+}
+
 /*--------------------/
-Tab layout
+Tab layout - Design
 /---------------------*/
 
-#design{
-    display: grid;
+.design{
+    display: none;
     column-gap: 30px;
-    grid-template-columns: 50% auto;
+    grid-template-columns: 55% auto;
 }
 
 .grid-example-elements{
-    background-color: #a403de0d;
+    background-color: #a403de07;
     display: grid;
-    padding: 50px;
-    column-gap: 30px;
+    padding: 70px;
+    column-gap: 20px;
     row-gap: 50px;
     grid-template-columns: 50% auto;
 }
@@ -35,8 +39,94 @@ Tab layout
 }
 
 /*--------------------/
+Tab layout - implementation
+/---------------------*/
+
+.implement-grid{
+    display: none;
+    column-gap: 30px;
+    grid-template-columns: 57% auto;
+    margin: 20px 10px;
+}
+
+.code-tab{
+    position: relative;
+    height: 500px;
+    border: 2px solid #00000056;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.code-button-panel{
+    position: absolute;
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.code-button-panel button{
+    background-color: transparent;
+    border: none;
+}
+
+.code-button-panel .code-tablink{
+    background-color: #00000005;
+    color: #000000bd;
+    padding:7px 25px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.code-button-panel .code-tablink:hover{
+    background-color: #a403de11;
+
+}
+
+.code-button-panel .code-active{
+    background-color: #a403de1e;
+    color: #A503DE;
+}
+
+.code-button-panel .code-active:hover{
+    background-color: #a403de1e;
+    color: #A503DE;
+}
+
+.html, .css{
+    margin-top: 40px;
+}
+
+#copy{
+    font-size: 14px;
+    padding: 7px 20px;
+    color: #A503DE;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+#copy:hover{
+    background-color: #a403de11;
+    
+}
+
+
+/*active tab */
+.active-tab-window{
+    display: grid;
+}
+
+
+
+
+/*--------------------/
 Buttons UI
 /---------------------*/
+
+
+/* Filled Buttons */
 
 .btn{
     border-style: inset;
@@ -72,6 +162,45 @@ Buttons UI
     box-shadow:  not-allowed;
 }
 
+.btn-ripple{
+    position: relative;
+    text-align: center;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn-ripple:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -200px;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.btn-ripple:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.buttonIcon-group{
+    display: inline-block;
+    width: fit-content;
+    min-width: 100px;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 4px;
+    box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, 0.030);
+}
+
+
 .button-round:hover, .button-square:hover{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), var(--accent);
 }
@@ -79,3 +208,81 @@ Buttons UI
 .secondary-button-square:hover{
     background-color: #0075db0f;
 }
+
+/*Outline Button*/
+
+.line-button-square{
+    border: 2px solid var(--accent);
+    background-color: transparent;
+    color: var(--accent);
+
+}
+
+.line-button-round{
+    border: 2px solid var(--accent);
+    border-radius: 100px;
+    background-color: transparent;
+    color: var(--accent);
+}
+
+.line-button-square-disabled{
+    background-color: transparent;
+    border: 2px solid #58585841;
+    color: #58585841 ;
+    cursor: default;
+    box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, 0);
+}
+
+.line-button-square:hover, .line-button-round:hover{
+    background-color: #a403de0b;
+}
+
+.line-btn-ripple{
+    position: relative;
+    text-align: center;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.line-btn-ripple:after {
+    content: "";
+    background: #a403de32;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -200px;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.line-btn-ripple:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+
+/*Text Button*/
+
+.text-button{
+    background-color: transparent;
+    color: var(--accent);
+    box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, 0);
+}
+
+
+.text-button-disabled{
+    background-color: transparent;
+    color: #58585841 ;
+    cursor: default;
+    box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, 0);
+}
+
+.text-button:hover{
+    background-color: #a403de0b;
+}
+

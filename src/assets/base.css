@@ -1,3 +1,9 @@
+
+body{
+  --accent: #A503DE;
+}
+
+
 /* Box sizing rules */
 *,
 *::before,
@@ -94,3 +100,34 @@ h1, h2, h3, h4{
 .bold{
   font-weight: 500;
 }
+
+button{
+  cursor: pointer;
+}
+
+.fa{
+  margin: 0 0 0 8px;
+  text-align: center;
+}
+
+/*scrollbar*/
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #a403de60;
+  border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #73029c;
+}
+
