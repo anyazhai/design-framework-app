@@ -57,6 +57,10 @@ Tab layout - implementation
     overflow-x: hidden;
 }
 
+code{
+    width: 300px;
+}
+
 .code-button-panel{
     position: absolute;
     width: 97%;

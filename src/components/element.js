@@ -1,8 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
 import '../assets/element.css';
+import '../assets/prism.css';
 import ButtonsUI from './buttonsUI';
-import buttonsData from '../json/buttons.json';
+
+import Prism from "prismjs";
+
 
 export default function Element(props){
     const [toggleState, setToggleState] = useState(1);
@@ -19,6 +22,12 @@ export default function Element(props){
                             <i class="fa fa-download btn-group-icon" aria-hidden="true"></i>
                             <span class="btn-group-text">Download</span>
                         </div> */}
+
+    class Codeblock extends React.Component {
+        componentDidMount() {
+          Prism.highlightAll();
+        }
+        }
     return(
         <div>
             <div className='element-change-tab'>
@@ -62,14 +71,29 @@ export default function Element(props){
                             <button id='copy'>Copy to Clipboard</button>
                         </div>
                         
-                        <div className={codeToggleState === 1? "code-window-active code" : "code"}>
-                        {props.html}
+                        <div className={codeToggleState === 1? "code-window-active code" : "code"}   >
+                        <pre>
+                                <code className="language-html">
+                                {props.html}
+                                </code>
+                            </pre>
+                            
                         </div>
+                        
                         <div className={codeToggleState === 2? "code-window-active code" : "code"}>
-                        {props.css}
+                        <pre>
+                                <code className="language-css">
+                                    {props.css}
+                                </code>
+                            </pre>
+                        
                         </div>
                         <div className={codeToggleState === 3? "code-window-active code" : "code"}>
-                        {props.js}
+                        <pre>
+                            <code className="language-javascript">
+                                {props.js}
+                            </code>
+                        </pre>
                         </div>
                     </div>
 
